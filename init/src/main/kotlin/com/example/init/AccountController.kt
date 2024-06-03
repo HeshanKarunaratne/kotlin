@@ -1,16 +1,15 @@
 package com.example.init
 
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import jakarta.validation.Valid
+import jakarta.validation.constraints.Size
+import org.springframework.web.bind.annotation.*
 
 data class ViewAccount(
     val id: Int, val name: String
 )
 
 data class CreateAccount(
+    @field:Size(min = 2, max = 5)
     val name: String
 )
 
@@ -23,5 +22,5 @@ class AccountController {
     fun getAll(): Iterable<ViewAccount> = listOf(ViewAccount(id = 1, name = "First Name"))
 
     @PostMapping
-    fun create(@RequestBody request: CreateAccount): ViewAccount = ViewAccount(id = 2, name = request.name)
+    fun create(@Valid @RequestBody request: CreateAccount): ViewAccount = ViewAccount(id = 2, name = request.name)
 }
