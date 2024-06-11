@@ -1,0 +1,408 @@
+2024-06-11T12:38:38.175+05:30  INFO 20704 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-11T12:38:38.176+05:30  INFO 20704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-11T12:38:38.177+05:30  INFO 20704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-11T12:38:38.453+05:30  WARN 20704 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-12-24 06:32:43": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-12-24 06:32:43' could not be parsed at index 10]
+2024-06-11T12:39:04.961+05:30  WARN 20704 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2022-12-25T01 06:32:43": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2022-12-25T01 06:32:43' could not be parsed at index 13]
+2024-06-11T12:39:19.899+05:30  WARN 20704 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2024-06-11 10:00:00": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2024-06-11 10:00:00' could not be parsed at index 10]
+2024-06-11T12:40:25.823+05:30  WARN 20704 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2024-06-11TO1:10:00:00": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2024-06-11TO1:10:00:00' could not be parsed at index 11]
+2024-06-11T12:41:16.109+05:30  WARN 20704 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2007-12-03T10:15:30:55.000000": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2007-12-03T10:15:30:55.000000' could not be parsed, unparsed text found at index 19]
+2024-06-11T12:41:23.987+05:30  WARN 20704 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2007-12-03T10:15:30:55": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2007-12-03T10:15:30:55' could not be parsed, unparsed text found at index 19]
+2024-06-11T12:41:29.684+05:30  INFO 20704 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T12:41:29.687+05:30  INFO 20704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-11T12:41:29.689+05:30  INFO 20704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-11T12:41:33.848+05:30  INFO 20484 --- [restartedMain] com.example.task.TaskApplicationKt       : Starting TaskApplicationKt using Java 17.0.11 with PID 20484 (C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task\build\classes\kotlin\main started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T12:41:33.851+05:30  INFO 20484 --- [restartedMain] com.example.task.TaskApplicationKt       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T12:41:33.918+05:30  INFO 20484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-11T12:41:33.918+05:30  INFO 20484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-11T12:41:35.361+05:30  INFO 20484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T12:41:35.420+05:30  INFO 20484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
+2024-06-11T12:41:35.973+05:30  INFO 20484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-11T12:41:35.983+05:30  INFO 20484 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-11T12:41:35.984+05:30  INFO 20484 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-11T12:41:36.037+05:30  INFO 20484 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-11T12:41:36.037+05:30  INFO 20484 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2118 ms
+2024-06-11T12:41:36.064+05:30  INFO 20484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-11T12:41:36.231+05:30  INFO 20484 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d7aef77
+2024-06-11T12:41:36.232+05:30  INFO 20484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-11T12:41:36.243+05:30  INFO 20484 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/kotlin'
+2024-06-11T12:41:36.369+05:30  INFO 20484 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T12:41:36.445+05:30  INFO 20484 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T12:41:36.494+05:30  INFO 20484 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T12:41:36.860+05:30  INFO 20484 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T12:41:37.864+05:30  INFO 20484 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T12:41:37.912+05:30  INFO 20484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T12:41:38.493+05:30  INFO 20484 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T12:41:38.927+05:30  WARN 20484 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T12:41:39.285+05:30  INFO 20484 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-11T12:41:39.325+05:30  INFO 20484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-11T12:41:39.334+05:30  INFO 20484 --- [restartedMain] com.example.task.TaskApplicationKt       : Started TaskApplicationKt in 6.014 seconds (process running for 6.609)
+2024-06-11T12:42:04.401+05:30  INFO 20484 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-11T12:42:04.401+05:30  INFO 20484 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-11T12:42:04.402+05:30  INFO 20484 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-11T12:42:04.678+05:30  WARN 20484 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2007-12-03T10:15:30:55": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2007-12-03T10:15:30:55' could not be parsed, unparsed text found at index 19]
+2024-06-11T12:42:49.610+05:30  WARN 20484 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Instantiation of [simple type, class com.example.task.data.model.TaskCreateRequest] value failed for JSON property createdOn due to missing (therefore NULL) value for creator parameter createdOn which is a non-nullable type]
+2024-06-11T12:45:12.524+05:30  WARN 20484 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2024-06-11T12:45:12.524+05:30 ERROR 20484 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "task_pkey"
+  Detail: Key (id)=(1) already exists.
+2024-06-11T12:45:12.537+05:30 ERROR 20484 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: duplicate key value violates unique constraint "task_pkey"
+  Detail: Key (id)=(1) already exists.] [insert into task (created_on,description,is_reminder_set,is_task_open,priority,id) values (?,?,?,?,?,?)]; SQL [insert into task (created_on,description,is_reminder_set,is_task_open,priority,id) values (?,?,?,?,?,?)]; constraint [task_pkey]] with root cause
+
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "task_pkey"
+  Detail: Key (id)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194) ~[postgresql-42.7.3.jar:42.7.3]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155) ~[postgresql-42.7.3.jar:42.7.3]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:104) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:110) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:632) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:371) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1425) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:487) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2324) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1981) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:676) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:426) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.3.0.jar:3.3.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.data.repository.core.support.MethodInvocationValidator.invoke(MethodInvocationValidator.java:95) ~[spring-data-commons-3.3.0.jar:3.3.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.1.8.jar:6.1.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy136.save(Unknown Source) ~[na:na]
+	at com.example.task.service.TaskService.createTask(TaskService.kt:59) ~[main/:na]
+	at com.example.task.controller.TaskController.createTask(TaskController.kt:31) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method.callMethod(CallerImpl.kt:97) ~[kotlin-reflect-1.9.24.jar:1.9.24-release-822]
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method$Instance.call(CallerImpl.kt:113) ~[kotlin-reflect-1.9.24.jar:1.9.24-release-822]
+	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:207) ~[kotlin-reflect-1.9.24.jar:1.9.24-release-822]
+	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112) ~[kotlin-reflect-1.9.24.jar:1.9.24-release-822]
+	at org.springframework.web.method.support.InvocableHandlerMethod$KotlinDelegate.invokeFunction(InvocableHandlerMethod.java:334) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2024-06-11T12:48:29.828+05:30  INFO 20484 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T12:48:29.832+05:30  INFO 20484 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-11T12:48:29.834+05:30  INFO 20484 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-11T12:48:34.285+05:30  INFO 3344 --- [restartedMain] com.example.task.TaskApplicationKt       : Starting TaskApplicationKt using Java 17.0.11 with PID 3344 (C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task\build\classes\kotlin\main started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T12:48:34.287+05:30  INFO 3344 --- [restartedMain] com.example.task.TaskApplicationKt       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T12:48:34.354+05:30  INFO 3344 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-11T12:48:34.354+05:30  INFO 3344 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-11T12:48:35.465+05:30  INFO 3344 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T12:48:35.526+05:30  INFO 3344 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2024-06-11T12:48:36.100+05:30  INFO 3344 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-11T12:48:36.111+05:30  INFO 3344 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-11T12:48:36.112+05:30  INFO 3344 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-11T12:48:36.170+05:30  INFO 3344 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-11T12:48:36.170+05:30  INFO 3344 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1815 ms
+2024-06-11T12:48:36.198+05:30  INFO 3344 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-11T12:48:36.370+05:30  INFO 3344 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50c133b3
+2024-06-11T12:48:36.372+05:30  INFO 3344 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-11T12:48:36.382+05:30  INFO 3344 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/kotlin'
+2024-06-11T12:48:36.497+05:30  INFO 3344 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T12:48:36.593+05:30  INFO 3344 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T12:48:36.641+05:30  INFO 3344 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T12:48:36.996+05:30  INFO 3344 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T12:48:38.177+05:30  INFO 3344 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T12:48:38.233+05:30  INFO 3344 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T12:48:38.796+05:30  INFO 3344 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T12:48:39.274+05:30  WARN 3344 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T12:48:39.602+05:30  INFO 3344 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-11T12:48:39.632+05:30  INFO 3344 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-11T12:48:39.641+05:30  INFO 3344 --- [restartedMain] com.example.task.TaskApplicationKt       : Started TaskApplicationKt in 5.925 seconds (process running for 6.579)
+2024-06-11T12:55:49.318+05:30  INFO 3344 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-11T12:55:49.319+05:30  INFO 3344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-11T12:55:49.320+05:30  INFO 3344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-11T12:56:55.251+05:30  WARN 3344 --- [http-nio-8080-exec-3] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [TaskNotFoundException(message=Task with the ID: 1 does not exist!)]
+2024-06-11T14:15:22.105+05:30  INFO 26512 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 26512 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:15:22.108+05:30  INFO 26512 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:15:22.572+05:30  INFO 26512 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:15:22.642+05:30  INFO 26512 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
+2024-06-11T14:15:22.699+05:30  INFO 26512 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:15:22.907+05:30  INFO 26512 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:cc1eb263-1c77-4f89-b6bc-6e5ebe4d078d;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:15:23.294+05:30  INFO 26512 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:15:23.415+05:30  INFO 26512 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:15:23.469+05:30  INFO 26512 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:15:23.860+05:30  INFO 26512 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:15:24.900+05:30  INFO 26512 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:15:24.964+05:30  INFO 26512 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:15:25.790+05:30  INFO 26512 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:15:26.462+05:30  INFO 26512 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 4.919 seconds (process running for 6.575)
+2024-06-11T14:15:27.239+05:30  INFO 26512 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:16:02.926+05:30  INFO 3740 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 3740 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:16:02.928+05:30  INFO 3740 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:16:03.346+05:30  INFO 3740 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:16:03.419+05:30  INFO 3740 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interface.
+2024-06-11T14:16:03.470+05:30  INFO 3740 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:16:03.668+05:30  INFO 3740 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:ed5f9664-5fd3-4198-a151-88f71b7e3a69;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:16:04.041+05:30  INFO 3740 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:16:04.167+05:30  INFO 3740 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:16:04.224+05:30  INFO 3740 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:16:04.558+05:30  INFO 3740 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:16:05.471+05:30  INFO 3740 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:16:05.530+05:30  INFO 3740 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:16:06.215+05:30  INFO 3740 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:16:06.897+05:30  INFO 3740 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 4.466 seconds (process running for 5.858)
+2024-06-11T14:16:07.666+05:30  INFO 3740 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:16:14.152+05:30  INFO 5284 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 5284 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:16:14.154+05:30  INFO 5284 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:16:14.560+05:30  INFO 5284 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:16:14.623+05:30  INFO 5284 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2024-06-11T14:16:14.674+05:30  INFO 5284 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:16:14.875+05:30  INFO 5284 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:9408e132-969c-40ee-8b8d-a048042b6b1b;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:16:15.245+05:30  INFO 5284 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:16:15.388+05:30  INFO 5284 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:16:15.439+05:30  INFO 5284 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:16:15.759+05:30  INFO 5284 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:16:16.667+05:30  INFO 5284 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:16:16.725+05:30  INFO 5284 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:16:17.465+05:30  INFO 5284 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:16:18.180+05:30  INFO 5284 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 4.498 seconds (process running for 5.872)
+2024-06-11T14:16:18.867+05:30  INFO 5284 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:19:00.280+05:30  INFO 9988 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 9988 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:19:00.283+05:30  INFO 9988 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:19:00.706+05:30  INFO 9988 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:19:00.762+05:30  INFO 9988 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2024-06-11T14:19:00.811+05:30  INFO 9988 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:19:01.002+05:30  INFO 9988 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:4fce38b2-784c-4c3f-b48f-ea98ad05d603;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:19:01.364+05:30  INFO 9988 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:19:01.480+05:30  INFO 9988 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:19:01.532+05:30  INFO 9988 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:19:01.857+05:30  INFO 9988 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:19:02.770+05:30  INFO 9988 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:19:02.827+05:30  INFO 9988 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:19:03.579+05:30  INFO 9988 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:19:04.247+05:30  INFO 9988 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 4.428 seconds (process running for 5.816)
+2024-06-11T14:19:04.977+05:30  INFO 9988 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:20:21.485+05:30  INFO 11408 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 11408 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:20:21.488+05:30  INFO 11408 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:20:21.914+05:30  INFO 11408 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:20:21.970+05:30  INFO 11408 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2024-06-11T14:20:22.023+05:30  INFO 11408 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:20:22.224+05:30  INFO 11408 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:a0877ebf-bf75-4160-bda8-f7ea0324a87c;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:20:22.581+05:30  INFO 11408 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:20:22.697+05:30  INFO 11408 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:20:22.752+05:30  INFO 11408 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:20:23.080+05:30  INFO 11408 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:20:24.002+05:30  INFO 11408 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:20:24.059+05:30  INFO 11408 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:20:24.780+05:30  INFO 11408 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:20:25.450+05:30  INFO 11408 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 4.462 seconds (process running for 5.854)
+2024-06-11T14:20:26.179+05:30  INFO 11408 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:20:32.050+05:30  INFO 13516 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 13516 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:20:32.052+05:30  INFO 13516 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:20:32.485+05:30  INFO 13516 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:20:32.545+05:30  INFO 13516 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
+2024-06-11T14:20:32.598+05:30  INFO 13516 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:20:32.813+05:30  INFO 13516 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:d78dcd79-3737-4907-8c18-ea567df9e5e0;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:20:33.242+05:30  INFO 13516 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:20:33.351+05:30  INFO 13516 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:20:33.403+05:30  INFO 13516 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:20:33.801+05:30  INFO 13516 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:20:34.930+05:30  INFO 13516 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:20:35.007+05:30  INFO 13516 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:20:35.823+05:30  INFO 13516 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:20:36.543+05:30  INFO 13516 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 4.969 seconds (process running for 6.351)
+2024-06-11T14:20:37.286+05:30  INFO 13516 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:23:12.240+05:30  INFO 18024 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 18024 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:23:12.243+05:30  INFO 18024 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:23:12.663+05:30  INFO 18024 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:23:12.722+05:30  INFO 18024 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
+2024-06-11T14:23:12.774+05:30  INFO 18024 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:23:12.974+05:30  INFO 18024 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:6f267d41-d7f6-4676-9139-5eff134df2dd;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:23:13.356+05:30  INFO 18024 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:23:13.478+05:30  INFO 18024 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:23:13.526+05:30  INFO 18024 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:23:13.887+05:30  INFO 18024 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:23:14.987+05:30  INFO 18024 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:23:15.049+05:30  INFO 18024 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:23:15.768+05:30  INFO 18024 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:23:16.497+05:30  INFO 18024 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 4.752 seconds (process running for 6.217)
+2024-06-11T14:23:17.332+05:30  INFO 18024 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:26:05.154+05:30  INFO 8428 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 8428 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:26:05.156+05:30  INFO 8428 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:26:05.593+05:30  INFO 8428 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:26:05.662+05:30  INFO 8428 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2024-06-11T14:26:05.711+05:30  INFO 8428 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:26:05.907+05:30  INFO 8428 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:d1134566-e7e4-49db-a3bd-d25c3318fd51;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:26:06.259+05:30  INFO 8428 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:26:06.398+05:30  INFO 8428 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:26:06.466+05:30  INFO 8428 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:26:06.805+05:30  INFO 8428 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:26:07.721+05:30  INFO 8428 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:26:07.777+05:30  INFO 8428 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:26:08.513+05:30  INFO 8428 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:26:09.196+05:30  INFO 8428 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 4.506 seconds (process running for 5.866)
+2024-06-11T14:26:10.061+05:30  INFO 8428 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:26:26.297+05:30  INFO 12392 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 12392 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:26:26.299+05:30  INFO 12392 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:26:26.783+05:30  INFO 12392 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:26:26.858+05:30  INFO 12392 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 1 JPA repository interface.
+2024-06-11T14:26:26.942+05:30  INFO 12392 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:26:27.170+05:30  INFO 12392 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:84e3d2b8-a37a-4eb9-baa0-b73299e965fa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:26:27.612+05:30  INFO 12392 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:26:27.704+05:30  INFO 12392 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:26:27.778+05:30  INFO 12392 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:26:28.160+05:30  INFO 12392 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:26:29.262+05:30  INFO 12392 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:26:29.330+05:30  INFO 12392 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:26:30.169+05:30  INFO 12392 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:26:30.957+05:30  INFO 12392 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 5.163 seconds (process running for 6.634)
+2024-06-11T14:26:31.891+05:30  INFO 12392 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:27:08.395+05:30  INFO 22628 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 22628 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:27:08.397+05:30  INFO 22628 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:27:08.861+05:30  INFO 22628 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:27:08.931+05:30  INFO 22628 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interface.
+2024-06-11T14:27:09.007+05:30  INFO 22628 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:27:09.221+05:30  INFO 22628 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:6998a117-4aad-4e9a-a4c1-8a95fc343e45;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:27:09.626+05:30  INFO 22628 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:27:09.738+05:30  INFO 22628 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:27:09.794+05:30  INFO 22628 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:27:10.177+05:30  INFO 22628 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:27:11.283+05:30  INFO 22628 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:27:11.349+05:30  INFO 22628 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:27:12.112+05:30  INFO 22628 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:27:12.898+05:30  INFO 22628 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 5.009 seconds (process running for 6.519)
+2024-06-11T14:27:13.863+05:30  INFO 22628 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:31:22.373+05:30  INFO 26292 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 26292 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:31:22.375+05:30  INFO 26292 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:31:22.790+05:30  INFO 26292 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:31:22.845+05:30  INFO 26292 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2024-06-11T14:31:22.906+05:30  INFO 26292 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:31:23.112+05:30  INFO 26292 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:f782191e-77c4-485b-a562-ef517d704f4f;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:31:23.474+05:30  INFO 26292 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:31:23.626+05:30  INFO 26292 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:31:23.683+05:30  INFO 26292 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:31:24.030+05:30  INFO 26292 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:31:24.094+05:30  INFO 3344 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:31:24.111+05:30  INFO 3344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-11T14:31:24.114+05:30  INFO 3344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-11T14:31:25.033+05:30  INFO 26292 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:31:25.099+05:30  INFO 26292 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:31:25.949+05:30  INFO 26292 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:31:26.665+05:30  INFO 26292 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 4.766 seconds (process running for 6.107)
+2024-06-11T14:31:27.553+05:30  INFO 26292 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:31:37.539+05:30  INFO 26932 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 26932 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:31:37.542+05:30  INFO 26932 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:31:37.980+05:30  INFO 26932 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:31:38.042+05:30  INFO 26932 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2024-06-11T14:31:38.096+05:30  INFO 26932 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:31:38.306+05:30  INFO 26932 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:2f3bacb8-1810-4d6a-8912-b7eeedd9d93f;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:31:38.706+05:30  INFO 26932 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:31:38.863+05:30  INFO 26932 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:31:38.916+05:30  INFO 26932 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:31:39.287+05:30  INFO 26932 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:31:40.343+05:30  INFO 26932 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:31:40.408+05:30  INFO 26932 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:31:41.138+05:30  INFO 26932 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:31:41.868+05:30  INFO 26932 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 4.806 seconds (process running for 6.155)
+2024-06-11T14:31:42.695+05:30  INFO 26932 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:33:50.602+05:30  INFO 24884 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Starting TaskRepositoryEmbeddedTest using Java 17.0.11 with PID 24884 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T14:33:50.603+05:30  INFO 24884 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T14:33:51.030+05:30  INFO 24884 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T14:33:51.095+05:30  INFO 24884 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2024-06-11T14:33:51.147+05:30  INFO 24884 --- [Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-06-11T14:33:51.349+05:30  INFO 24884 --- [Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:04df6343-bbd3-4bb4-b1ed-fc1766bb055e;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-06-11T14:33:51.728+05:30  INFO 24884 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T14:33:51.838+05:30  INFO 24884 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-11T14:33:51.884+05:30  INFO 24884 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-11T14:33:52.210+05:30  INFO 24884 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-11T14:33:53.144+05:30  INFO 24884 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-11T14:33:53.202+05:30  INFO 24884 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T14:33:53.949+05:30  INFO 24884 --- [Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-11T14:33:54.722+05:30  INFO 24884 --- [Test worker] c.e.t.r.TaskRepositoryEmbeddedTest       : Started TaskRepositoryEmbeddedTest in 4.611 seconds (process running for 6.054)
+2024-06-11T14:33:55.605+05:30  INFO 24884 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T21:04:55.530+05:30  INFO 5068 --- [Test worker] c.e.t.c.TaskControllerIntegrationTest    : Starting TaskControllerIntegrationTest using Java 17.0.11 with PID 5068 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T21:04:55.532+05:30  INFO 5068 --- [Test worker] c.e.t.c.TaskControllerIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T21:05:00.342+05:30  INFO 5068 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T21:05:00.342+05:30  INFO 5068 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T21:05:00.345+05:30  INFO 5068 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-06-11T21:05:00.421+05:30  INFO 5068 --- [Test worker] c.e.t.c.TaskControllerIntegrationTest    : Started TaskControllerIntegrationTest in 5.655 seconds (process running for 7.93)
+2024-06-11T21:05:01.573+05:30  WARN 5068 --- [Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "13L"]
+2024-06-11T22:34:55.205+05:30  INFO 3332 --- [Test worker] c.e.t.c.TaskControllerIntegrationTest    : Starting TaskControllerIntegrationTest using Java 17.0.11 with PID 3332 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T22:34:55.208+05:30  INFO 3332 --- [Test worker] c.e.t.c.TaskControllerIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T22:35:01.521+05:30  INFO 3332 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T22:35:01.522+05:30  INFO 3332 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T22:35:01.527+05:30  INFO 3332 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2024-06-11T22:35:01.629+05:30  INFO 3332 --- [Test worker] c.e.t.c.TaskControllerIntegrationTest    : Started TaskControllerIntegrationTest in 7.103 seconds (process running for 9.693)
+2024-06-11T22:35:03.204+05:30  WARN 3332 --- [Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "13L"]
+2024-06-11T23:21:03.920+05:30  INFO 13264 --- [Test worker] c.e.t.c.TaskControllerIntegrationTest    : Starting TaskControllerIntegrationTest using Java 17.0.11 with PID 13264 (started by HeshanKarunaratne in C:\Users\HeshanKarunaratne\Downloads\Heshan\Projects\task)
+2024-06-11T23:21:03.925+05:30  INFO 13264 --- [Test worker] c.e.t.c.TaskControllerIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T23:21:09.932+05:30  INFO 13264 --- [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T23:21:09.933+05:30  INFO 13264 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T23:21:09.945+05:30  INFO 13264 --- [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 10 ms
+2024-06-11T23:21:10.234+05:30  INFO 13264 --- [Test worker] c.e.t.c.TaskControllerIntegrationTest    : Started TaskControllerIntegrationTest in 6.928 seconds (process running for 9.203)
+2024-06-11T23:21:12.871+05:30  WARN 13264 --- [Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "13L"]
