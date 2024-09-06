@@ -11,6 +11,7 @@ fun getMessage(status: OrderStatus) = when (status) {
     OrderStatus.DELIVERED -> "Delivered"
 }
 
+@OptIn(ExperimentalStdlibApi::class)
 fun main() {
     OrderStatus.entries.forEach {
         println("${it.name}: ${it.ordinal}")
