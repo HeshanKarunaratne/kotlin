@@ -105,9 +105,9 @@ class FavouriteStrings(val first: String, val second: String) : Iterable<String>
     }
 }
 
-fun main(){
+fun main() {
     val favourites = FavouriteStrings("one", "two")
-    for(favourite in favourites){
+    for (favourite in favourites) {
         println(favourite)
     }
 }
@@ -122,7 +122,7 @@ Used for storing immutable data. When you use the data modifier on a class it au
 ```kt
 data class Book(val id: Int, val title: String, val author: String)
 
-fun main(){
+fun main() {
     val myBook = Book(256, "The Malt Shop Caper", "Slim Chancery")
     println(myBook)
     val myBookV2 = myBook.copy(author = "Heshan Karunaratne")
@@ -137,9 +137,12 @@ When you want to wrap a simple type with a strong domain model. You need to make
 ```
 
 ```kt
-@JvmInline value class Id(val value: Int)
-@JvmInline value class Title(val value: String)
-@JvmInline value class Author(val value: String)
+@JvmInline
+value class Id(val value: Int)
+@JvmInline
+value class Title(val value: String)
+@JvmInline
+value class Author(val value: String)
 
 data class Book2(val id: Id, val title: Title, val author: Author)
 
@@ -201,7 +204,7 @@ You can create your own annotation, You need to add general meta annotations as 
 @Target(AnnotationTarget.FUNCTION)
 @Retention(AnnotationRetention.RUNTIME)
 @Repeatable
-annotation class RequiresRoles(val role:String)
+annotation class RequiresRoles(val role: String)
 ```
 
 ### Smart Casting
@@ -212,40 +215,40 @@ import kotlin.contracts.contract
 
 sealed class User {
 
-  @OptIn(ExperimentalContracts::class)
-  fun isAuthenticated(): Boolean {
-    contract {
-      returns(true) implies (this@User is Authenticated)
-      returns(false) implies (this@User is Anonymous)
+    @OptIn(ExperimentalContracts::class)
+    fun isAuthenticated(): Boolean {
+        contract {
+            returns(true) implies (this@User is Authenticated)
+            returns(false) implies (this@User is Anonymous)
+        }
+        return this is Authenticated
     }
-    return this is Authenticated
-  }
 
-  class Anonymous() : User() {
-    fun promptToSignIn() = println("Please sign in.")
-  }
+    class Anonymous() : User() {
+        fun promptToSignIn() = println("Please sign in.")
+    }
 
-  class Authenticated(val username: String) : User() {
-    fun greet() = println("Welcome, $username")
-  }
+    class Authenticated(val username: String) : User() {
+        fun greet() = println("Welcome, $username")
+    }
 }
 
-fun onScreenLoaded(user:User){
-  if(user.isAuthenticated()) user.greet() else user.promptToSignIn()
+fun onScreenLoaded(user: User) {
+    if (user.isAuthenticated()) user.greet() else user.promptToSignIn()
 }
 ```
 
 - Limitations
-  - returns - Can only be from below list
-    - true
-    - false
-    - null
-    - notNull
-  - implies
-    - x is Type
-    - x !is Type
-    - x == null
-    - x != null
+    - returns - Can only be from below list
+        - true
+        - false
+        - null
+        - notNull
+    - implies
+        - x is Type
+        - x !is Type
+        - x == null
+        - x != null
 
 ### Try-Catch and runCatching()
 
@@ -263,3 +266,59 @@ fun main() {
     result.onFailure { ex -> println("Unable to parse. ${ex.message}") }
 }
 ```
+
+### Variance
+
+- Within a subtype return types can be more specific: Covariance
+- Within a subtype parameter types can be more general: Contravariance
+
+```kt
+package advanced_concepts.generics_variance
+
+open class Snack
+class CandyBar : Snack()
+
+open class Money
+open class Coin : Money()
+class Dime : Coin()
+class Quarter : Coin()
+
+fun interface VendingMachine {
+    fun purchase(money: Coin): Snack
+}
+
+class SimpleVendingMachine1 : VendingMachine {
+    override fun purchase(money: Coin): Snack = Snack()
+}
+
+class SimpleVendingMachine2 : VendingMachine {
+    override fun purchase(money: Coin): CandyBar = CandyBar()
+}
+
+class SimpleVendingMachine3 : VendingMachine {
+    private fun purchase(money: Money): CandyBar = CandyBar()
+    override fun purchase(coin: Coin): Snack = purchase(coin as Money)
+}
+```
+
+- Overloading properties with function types
+- In below Money is the super type of Coin, this cannot be achieved using functions as in above
+
+```kt
+interface VendingPropMachine {
+    val purchase: (Coin) -> Snack
+}
+
+class SimpleVendingPropMachine1 : VendingPropMachine {
+    override val purchase: (Money) -> Snack = { CandyBar() }
+}
+
+
+interface VendingGenMachine<in T, out R>
+class Test1 : VendingGenMachine<Coin, Snack>
+class Test2 : VendingGenMachine<Money, CandyBar>
+```
+
+- R which is the return type uses Covariance (Can use a specific type instead of general case)
+- T which is the input parameter type uses Contravariance (Can use the parent(general case))
+- Above contracts are type safe as well
