@@ -1,6 +1,7 @@
 package advanced_concepts.generics_variance
 
-open class Snack
+open class Product
+open class Snack : Product()
 class CandyBar : Snack()
 
 open class Money

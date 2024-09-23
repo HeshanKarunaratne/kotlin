@@ -322,3 +322,66 @@ class Test2 : VendingGenMachine<Money, CandyBar>
 - R which is the return type uses Covariance (Can use a specific type instead of general case)
 - T which is the input parameter type uses Contravariance (Can use the parent(general case))
 - Above contracts are type safe as well
+
+### Type Projections
+
+```txt
+Product
+  ^
+  |
+Snack
+  ^
+  |
+CandyBar
+```
+
+```kt
+// out projection
+
+class VendingTypeProjectionMachine<T : Snack>(private val product: T) {
+    fun purchase(money: Money): T = product
+    fun refund(product: T): Money = Coin()
+}
+
+val candyBarMachine: VendingTypeProjectionMachine<CandyBar> = VendingTypeProjectionMachine(CandyBar())
+val snackMachine: VendingTypeProjectionMachine<out Snack> = candyBarMachine
+
+// Here T converts to Nothing type and it is the subtype of every other type that will encounter
+//val result = snackMachine.refund(product: T)
+
+```
+
+```kt
+// in projection
+class VendingTypeProjectionMachine<T : Snack>(private val product: T) {
+    fun purchase(money: Money): T = product
+    fun refund(product: T): Money = Coin()
+}
+
+val snackMachine: VendingTypeProjectionMachine<Snack> = VendingTypeProjectionMachine(CandyBar())
+val candyBarMachine: VendingTypeProjectionMachine<in CandyBar> = snackMachine
+
+// Here it converts the return type to Any?(nullable any)
+//val result: Any? = candyBarMachine.purchase(Coin())
+```
+
+```kt
+// star projection
+class VendingStarProjectionMachine<T : Product>(private val product: T) {
+    fun purchase(money: Money): T = product
+    fun refund(product: T): Money = Coin()
+    fun performMaintenance() = println("All tuned up")
+}
+
+fun main() {
+
+    val snackMachine: VendingStarProjectionMachine<Snack> = VendingStarProjectionMachine(Snack())
+    val candyBarMachine: VendingStarProjectionMachine<CandyBar> = VendingStarProjectionMachine(CandyBar())
+
+    var anyMachine: VendingStarProjectionMachine<*>
+    anyMachine = snackMachine
+    anyMachine = candyBarMachine
+
+    anyMachine.performMaintenance()
+}
+```
