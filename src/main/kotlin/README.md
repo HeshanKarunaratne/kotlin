@@ -385,3 +385,18 @@ fun main() {
     anyMachine.performMaintenance()
 }
 ```
+
+### SubTyping
+
+```txt
+SuperType
++ exec(x: Int): Any
+   ^
+   |
+SubType
++ exec(x: Any): String
+
+1. The subtype must have each of the non private functions that exists in its supertype
+2. The function parameter types in the subtype must be the same as or more general than the corresponding parameter types in its supertype - Contravariance
+3. The function return types in the subtype must be the same as or more specific than the corresponding return types in its supertype - Covariance
+```
