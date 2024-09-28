@@ -139,8 +139,10 @@ When you want to wrap a simple type with a strong domain model. You need to make
 ```kt
 @JvmInline
 value class Id(val value: Int)
+
 @JvmInline
 value class Title(val value: String)
+
 @JvmInline
 value class Author(val value: String)
 
@@ -399,4 +401,22 @@ SubType
 1. The subtype must have each of the non private functions that exists in its supertype
 2. The function parameter types in the subtype must be the same as or more general than the corresponding parameter types in its supertype - Contravariance
 3. The function return types in the subtype must be the same as or more specific than the corresponding return types in its supertype - Covariance
+```
+
+### Reified
+
+- When you create an inline function with the type parameter reified this code won't loose type arguments at the
+  runtime(type erasure)
+- Inline function can be called from java, but inline function with reified type parameter cannot be called from java
+
+```kt
+inline fun <reified T> secondItemHasType(list: List<*>): Boolean {
+    return list[1] is T
+}
+
+fun main() {
+    val list: List<Any> = listOf(1, "two", 3)
+    val secondItemIsString = secondItemHasType<String>(list)
+    println(secondItemIsString)
+}
 ```
