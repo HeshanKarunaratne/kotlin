@@ -420,3 +420,236 @@ fun main() {
     println(secondItemIsString)
 }
 ```
+
+### Decorator Pattern
+
+```kt
+package advanced_concepts.patterns.decorator
+
+import java.time.Clock
+import java.util.*
+
+//Component
+fun interface Logger {
+    fun log(message: String)
+}
+
+//Concrete Component
+class ConsoleLogger : Logger {
+    override fun log(message: String) {
+        println(message)
+    }
+}
+
+//Concrete Decorator
+class UniqueIdLogger(private val logger: Logger) : Logger {
+    override fun log(message: String) = logger.log("${UUID.randomUUID()} $message")
+}
+
+class ThreadNameLogger(private val logger: Logger) : Logger {
+    override fun log(message: String) = logger.log("$message (on ${Thread.currentThread().name} thread)")
+}
+
+class DateTimeLogger(private val logger: Logger, private val clock: Clock = Clock.systemUTC()) : Logger {
+    override fun log(message: String) = logger.log("[${clock.instant()}] $message")
+}
+
+fun main() {
+    val consoleLogger = UniqueIdLogger(ThreadNameLogger(DateTimeLogger(ConsoleLogger())))
+    consoleLogger.log("Application initialized")
+}
+```
+
+```kt
+import java.time.Clock
+import java.util.*
+
+fun interface Logger {
+    fun log(message: String)
+}
+
+val consoleLogger = Logger { println(it) }
+fun Logger.withUniqueId() = Logger { log("${UUID.randomUUID()} $it") }
+fun Logger.withThreadName() = Logger { log("$it (on ${Thread.currentThread().name} thread)") }
+fun Logger.withDateTime(clock: Clock = Clock.systemUTC()) = Logger { log("[${clock.instant()}] $it") }
+
+fun main() {
+    val consoleLogger = consoleLogger.withDateTime().withThreadName().withUniqueId()
+    consoleLogger.log("Application initialized")
+}
+```
+
+### Strategy Pattern
+
+```kt
+//Strategy
+fun interface Validator {
+    fun isValid(value: String): Boolean
+}
+
+//Concrete Strategy
+class EmailValidator : Validator {
+    override fun isValid(value: String) = value.contains("@") && value.contains(".")
+}
+
+class UsernameValidator : Validator {
+    override fun isValid(value: String) = value.isNotEmpty()
+}
+
+class PasswordValidator : Validator {
+    override fun isValid(value: String) = value.length >= 8
+}
+
+//Context
+class FormField(val name: String, val value: String, private val validator: Validator) {
+    fun isValid(): Boolean {
+        return validator.isValid(value)
+    }
+}
+```
+
+```kt
+package advanced_concepts.patterns.strategy
+
+typealias Validator = (String) -> Boolean
+
+val emailValidator: Validator = { it.contains("@") && it.contains(".") }
+val usernameValidator: Validator = { it.isNotEmpty() }
+val passwordValidator: Validator = { it.length >= 8 }
+
+class FormField(val name: String, private val value: String, private val validator: Validator) {
+    fun isValid() = validator(value)
+}
+
+fun Validator.optional(): Validator = { it.isEmpty() || this(it) }
+
+fun main() {
+    val emailField = FormField("email", "test@example.com", emailValidator.optional())
+    println(emailField.isValid())
+
+    val usernameField = FormField("username", "user123", usernameValidator)
+    println(usernameField.isValid())
+
+    val passwordField = FormField("password", "password123", passwordValidator)
+    println(passwordField.isValid())
+
+}
+```
+
+### State Pattern
+
+```kt
+package advanced_concepts.patterns.state
+
+enum class UserState {
+    ANONYMOUS, UNVERIFIED, AUTHENTICATED
+}
+
+class User(var email: String? = null, var state: UserState = UserState.ANONYMOUS) {
+
+    fun signUp(email: String) {
+        when (state) {
+            UserState.ANONYMOUS -> {
+                println("Signing up with email: $email")
+                this.email = email
+                state = UserState.UNVERIFIED
+            }
+
+            UserState.UNVERIFIED -> println("You are already signed up")
+            UserState.AUTHENTICATED -> println("You are already signed up and authenticated")
+        }
+    }
+
+    fun verifyEmail(token: String) {
+        when (state) {
+            UserState.ANONYMOUS -> println("You must sign up before verifying your email")
+            UserState.UNVERIFIED -> {
+                println("Verifying email with token: $token")
+                state = UserState.AUTHENTICATED
+            }
+
+            UserState.AUTHENTICATED -> println("You are already verified")
+        }
+    }
+
+    fun viewContent() {
+        when (state) {
+            UserState.ANONYMOUS -> println("Viewing public content")
+            UserState.UNVERIFIED -> println("Viewing personalized content for unverified account")
+            UserState.AUTHENTICATED -> println("Viewing personalized content")
+        }
+    }
+
+    fun viewProfile() {
+        when (state) {
+            UserState.ANONYMOUS -> println("You must sign in to view your profile")
+            UserState.UNVERIFIED -> println("Profile: $email (Unverified account, please verify your email)")
+            UserState.AUTHENTICATED -> println("Profile: $email (Fully authenticated)")
+        }
+    }
+}
+```
+
+```kt
+package advanced_concepts.patterns.state
+
+//State
+interface UserState {
+    fun signUp(user: User, email: String)
+    fun verifyEmail(user: User, token: String)
+    fun viewContent()
+    fun viewProfile(user: User)
+    fun editProfile(user: User, newEmail: String)
+}
+
+//Concrete State
+object Anonymous : UserState {
+    override fun signUp(user: User, email: String) {
+        println("Signing up with email: $email")
+        user.email = email
+        user.state = Unverified
+    }
+
+    override fun verifyEmail(user: User, token: String) = println("You must sign up before verifying your email")
+    override fun viewContent() = println("Viewing public content")
+    override fun viewProfile(user: User) = println("You must sign in to view your profile")
+    override fun editProfile(user: User, newEmail: String) = println("You must sign in to edit your profile")
+
+}
+
+object Unverified : UserState {
+    override fun signUp(user: User, email: String) = println("You are already signed up")
+    override fun verifyEmail(user: User, token: String) {
+        println("Verifying email with token: $token")
+        user.state = Authenticated
+    }
+
+    override fun viewContent() = println("Viewing personalized content for unverified account")
+    override fun viewProfile(user: User) =
+        println("Profile: ${user.email} (Unverified account, please verify your email)")
+
+    override fun editProfile(user: User, newEmail: String) =
+        println("Please verify your account before editing your profile")
+
+}
+
+object Authenticated : UserState {
+    override fun signUp(user: User, email: String) = println("You are already signed up and authenticated")
+    override fun verifyEmail(user: User, token: String) = println("You are already verified")
+    override fun viewContent() = println("Viewing personalized content")
+    override fun viewProfile(user: User) = println("Profile: ${user.email} (Fully authenticated)")
+    override fun editProfile(user: User, newEmail: String) {
+        println("Profile: Updating email from ${user.email} to $newEmail")
+        user.email = newEmail
+    }
+}
+
+// Context
+class User(var email: String? = null, var state: UserState = Anonymous) {
+    fun signUp(email: String) = state.signUp(this, email)
+    fun verifyEmail(token: String) = state.verifyEmail(this, token)
+    fun viewContent() = state.viewContent()
+    fun viewProfile() = state.viewProfile(this)
+    fun editProfile(newEmail: String) = state.editProfile(this, newEmail)
+}
+```
