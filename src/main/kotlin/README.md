@@ -653,3 +653,32 @@ class User(var email: String? = null, var state: UserState = Anonymous) {
     fun editProfile(newEmail: String) = state.editProfile(this, newEmail)
 }
 ```
+
+### Scopes
+
+- Function bodies and lambdas have statement scope
+- Class bodies and the file itself have declaration scope
+
+```kt
+// Top level file scope
+val pi = 3.14
+
+// Top level file scope
+class Circle(var radius: Double) {
+    // Class body scope
+    val diameter = radius * 2
+
+    fun circumference(): Double {
+        // Function body scope
+        return pi * diameter
+    }
+}
+
+fun createCircles(radii: List<Double>): List<Circle> {
+    // Function body scope
+    return radii.map { radius ->
+        // Lambda scope
+        Circle(radius)
+    }
+}
+```
