@@ -682,3 +682,122 @@ fun createCircles(radii: List<Double>): List<Circle> {
     }
 }
 ```
+
+```kt
+package advanced_concepts.extension_functions
+
+val pi = 3.14
+
+fun main() {
+    val radii = listOf(1.0, 2.0, 3.0)
+
+    class Circle(
+        val radius: Double
+    ) {
+        fun circumference(): Double {
+            val multiplier = 2.0
+            //TODO: What are the variables visible here
+            val diameter = radius * multiplier
+            return multiplier * pi * radius
+        }
+
+        val area = pi * radius * radius
+    }
+
+    val areas = radii.map {
+        Circle(it).area
+    }
+}
+```
+
+- The variables that are visible there are?
+    - multiplier - Going up in statement scope
+    - area - Declaration scope of the class
+    - radius - Parameter scope of the class
+    - radii - Going up in statement scope
+    - pi - Declaration scope of the file
+
+### Scope Functions
+
+###### with()
+
+- We can use the with() scope function to introduce a new scope in which the context object is represented as
+  an implicit receiver
+
+```kt
+address.street1 = "9801 Maple Ave"
+address.street2 = "Apartment 255"
+address.city = "Rocksteady"
+address.state = "IN"
+address.postalCode = "12345"
+
+// Here the address is the context object
+with(address) {
+    // Below is the lambda
+    street1 = "9801 Maple Ave"
+    street2 = "Apartment 255"
+    city = "Rocksteady"
+    state = "IN"
+    postalCode = "12345"
+}
+```
+
+###### run()
+
+- The run() function works the same as with(), but it’s an extension function instead of a normal, top-level
+  function
+
+```kt
+// address is the context object
+address.run {
+    street1 = "9801 Maple Ave"
+    street2 = "Apartment 255"
+    city = "Rocksteady"
+    state = "IN"
+    postalCode = "12345"
+}
+```
+
+###### let()
+
+- Might be the most frequently-used scope function. It’s very similar to run(),but instead of representing the
+  context object as an implicit receiver, it’s represented as the parameter of its lambda
+- run(), let() and with() functions returns the result of the lambda
+
+```kt
+address.let { titleWithoutPrefix -> "'$titleWithoutPrefix'" }
+
+address.let { "'$it'" }
+```
+
+###### also()
+
+- Function represents the context object as the lambda parameter
+- Returns the context object as well
+
+```kt
+val title = "The Robots from Planet X3"
+val newTitle = title
+    .removePrefix("The ")
+    .also {::println}
+    .singleQuoted()
+    .uppercase()
+```
+
+###### apply()
+
+- Function returns the context object rather than the result, but it also represents the context object as the implicit receiver
+
+```kt
+val title = "The Robots from Planet X3"
+val newTitle = title
+    .removePrefix("The ")
+    .apply { println(this) }
+    .singleQuoted()
+    .uppercase()
+```
+
+|                         | Context object is implicit receiver(this) | Context object is lambda parameter(it) |
+|-------------------------|----------------------------------------|-------------------------------------|
+| Returns result of lambda | obj.run { }                            | obj.let { }                         |
+| Returns context object  | obj.apply { }                          | obj.also { }                        |
