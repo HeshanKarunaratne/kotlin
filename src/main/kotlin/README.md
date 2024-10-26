@@ -779,14 +779,15 @@ address.let { "'$it'" }
 val title = "The Robots from Planet X3"
 val newTitle = title
     .removePrefix("The ")
-    .also {::println}
+    .also { ::println }
     .singleQuoted()
     .uppercase()
 ```
 
 ###### apply()
 
-- Function returns the context object rather than the result, but it also represents the context object as the implicit receiver
+- Function returns the context object rather than the result, but it also represents the context object as the implicit
+  receiver
 
 ```kt
 val title = "The Robots from Planet X3"
@@ -797,7 +798,52 @@ val newTitle = title
     .uppercase()
 ```
 
-|                         | Context object is implicit receiver(this) | Context object is lambda parameter(it) |
-|-------------------------|----------------------------------------|-------------------------------------|
-| Returns result of lambda | obj.run { }                            | obj.let { }                         |
-| Returns context object  | obj.apply { }                          | obj.also { }                        |
+|                          | Context object is implicit receiver(this) | Context object is lambda parameter(it) |
+|--------------------------|-------------------------------------------|----------------------------------------|
+| Returns result of lambda | obj.run { }                               | obj.let { }                            |
+| Returns context object   | obj.apply { }                             | obj.also { }                           |
+
+### Abstract and Open
+
+- Abstract classes can be extended by other classes. Their functions and properties can be
+    - abstract: in which case they have nobody in the abstract class, but subclasses must implement them
+    - open: in which case they have a body in the abstract class, but subclasses may override them
+- Open classes cannot contain abstract members
+- Protected modifier 
+
+```kt
+package advanced_concepts.abstract_open
+
+abstract class Car(private val acceleration: Double = 1.0) {
+    private var speed = 0.0
+
+    // Protected: A function or property marked as protected will be visible to both the current class and its subclasses, but invisible to code everywhere else
+    protected open fun makeEngineSound() = println("vrrrrrrr")
+
+    fun accelerate() {
+        speed += acceleration
+        makeEngineSound()
+    }
+}
+
+class Clunker(acceleration: Double) : Car(acceleration) {
+    override fun makeEngineSound() = println("putt-putt-putt")
+}
+
+class Speedy(acceleration: Double) : Car(acceleration)
+
+fun main() {
+    val clunker = Clunker(0.25)
+    clunker.accelerate()
+
+    val speedy = Speedy(1.5)
+    speedy.accelerate()
+}
+```
+
+- We can use a subtype(MuscleCar) anywhere it expects a supertype(Car)
+- Every class in kotlin implicitly extend Any class
+
+```kt
+val car: Car = MuscleCar()
+```
