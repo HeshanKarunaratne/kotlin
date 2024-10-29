@@ -809,7 +809,7 @@ val newTitle = title
     - abstract: in which case they have nobody in the abstract class, but subclasses must implement them
     - open: in which case they have a body in the abstract class, but subclasses may override them
 - Open classes cannot contain abstract members
-- Protected modifier 
+- Protected modifier
 
 ```kt
 package advanced_concepts.abstract_open
@@ -847,3 +847,5 @@ fun main() {
 ```kt
 val car: Car = MuscleCar()
 ```
+
+### Data Classes
