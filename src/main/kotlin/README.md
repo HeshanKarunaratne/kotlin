@@ -848,4 +848,56 @@ fun main() {
 val car: Car = MuscleCar()
 ```
 
-### Data Classes
+### Sealed Classes
+
+```kt
+package advanced_concepts.sealed_class
+
+enum class Size { CUP, BUCKET, BAG }
+
+interface Request {
+    val id: Int
+}
+
+class OrderRequest(override val id: Int, val size: Size) : Request
+
+class RefundRequest(override val id: Int, val size: Size, val reason: String) : Request
+
+class SupportRequest(override val id: Int, val text: String) : Request
+
+object FrontDesk {
+    fun receive(request: Request) {
+        println("Handling request #${request.id}")
+        when (request) {
+            is OrderRequest -> IceCubeFactory.fulfillOrder(request)
+            is RefundRequest -> IceCubeFactory.fulfillRefund(request)
+            is SupportRequest -> HelpDesk.handle(request)
+        }
+    }
+}
+
+object IceCubeFactory {
+    fun fulfillOrder(order: OrderRequest) = println("Fulfilling order #${order.id}")
+    fun fulfillRefund(refund: RefundRequest) = println("Fulfilling refund #${refund.id}")
+}
+
+object HelpDesk {
+    fun handle(request: SupportRequest) = println("Help desk is handling ${request.id}")
+}
+
+fun main() {
+    val order = OrderRequest(123, Size.CUP)
+    FrontDesk.receive(order)
+
+    val refund = RefundRequest(124, Size.CUP, "Too small")
+    FrontDesk.receive(refund)
+
+    val support = SupportRequest(789, "I can't open the bag of ice!")
+    FrontDesk.receive(support)
+}
+```
+
+- Sealed class is by definition, also an abstract class. You cant directly instantiate it
+- You can only instantiate its subclasses
+- If you want to limit the values use enum class
+- If you want to limit the types use a sealed type

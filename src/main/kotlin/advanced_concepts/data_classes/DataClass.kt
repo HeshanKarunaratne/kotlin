@@ -15,6 +15,8 @@ class DollarBill(val amount: Int) {
     }
 }
 
+data class DollarBill2(val amount: Int)
+
 val bill1 = DollarBill(5)
 val bill2 = DollarBill(5)
 
@@ -33,8 +35,23 @@ fun main() {
     denominations.add(DollarBill(2))
     denominations.add(DollarBill(5))
     denominations.add(DollarBill(5))
-
     println(denominations.size)
-
     println(DollarBill(1))
+
+    println("--------Data Class-------")
+
+    val denominations2 = mutableSetOf<DollarBill2>()
+    denominations2.add(DollarBill2(1))
+    denominations2.add(DollarBill2(2))
+    denominations2.add(DollarBill2(5))
+    denominations2.add(DollarBill2(5))
+    println(denominations2.size)
+    println(DollarBill2(1))
+
+    val dollarBill2 = DollarBill2(100)
+    val dollarBill2Updated = dollarBill2.copy(amount = 120)
+    println(dollarBill2Updated)
+
+    val (amount) = dollarBill2
+    println(amount)
 }
