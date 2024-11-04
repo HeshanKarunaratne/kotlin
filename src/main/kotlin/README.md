@@ -901,3 +901,5 @@ fun main() {
 - You can only instantiate its subclasses
 - If you want to limit the values use enum class
 - If you want to limit the types use a sealed type
+
+### Runtime Exceptions
