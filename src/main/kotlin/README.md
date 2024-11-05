@@ -903,3 +903,27 @@ fun main() {
 - If you want to limit the types use a sealed type
 
 ### Runtime Exceptions
+
+```kt
+package advanced_concepts.exceptions
+
+val ordinals = listOf("zeroth", "first", "second", "third", "fourth", "fifth")
+fun ordinal(number: Int) = ordinals.get(number)
+
+fun annc(number: Int, task: String): String {
+    if ("clean" in task) throw Exception("No cleaning allowed on holidays!")
+    val ordinal = ordinal(number)
+    return "The $ordinal thing I will do is $task."
+}
+
+fun main() {
+    val tasks = listOf(1 to "clean my room", 9 to "take out trash", 3 to "feed the dog")
+    tasks.forEach { (number, task) ->
+        try {
+            println(annc(number, task))
+        } catch (e: Exception) {
+            println("Something went wrong! ${e.message}")
+        }
+    }
+}
+```
