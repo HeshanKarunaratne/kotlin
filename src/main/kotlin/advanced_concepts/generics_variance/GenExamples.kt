@@ -16,7 +16,7 @@ enum class Coffee : Beverage {
     override val idealTemperature = 135
 }
 
-class Mug<T>(val beverage: T) {
+class Mug<T : Beverage>(val beverage: T) {
     val temperature = beverage.idealTemperature
 }
 
@@ -30,4 +30,18 @@ fun main() {
     val teaMug = Mug(Tea.GREEN_TEA)
     drink(teaMug.beverage)
 
+    val mug = serve(Coffee.DARK_ROAST)
+    val mug2 = Coffee.DARK_ROAST.pourIntoMug()
 }
+
+class Dish<T>(private var food: T) {
+    fun replaceFood(newFood: T) {
+        println("Replacing $food with $newFood")
+        food = newFood
+    }
+
+    fun getFood(): T = food
+}
+
+fun <T : Beverage> serve(beverage: T): Mug<T> = Mug(beverage)
+fun <T : Beverage> T.pourIntoMug() = Mug(this)
