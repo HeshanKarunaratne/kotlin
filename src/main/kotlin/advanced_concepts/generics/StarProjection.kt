@@ -1,4 +1,4 @@
-package advanced_concepts.generics_variance
+package advanced_concepts.generics
 
 class VendingStarProjectionMachine<T : Product>(private val product: T) {
     fun purchase(money: Money): T = product

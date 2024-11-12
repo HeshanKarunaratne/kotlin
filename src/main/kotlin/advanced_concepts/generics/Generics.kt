@@ -1,4 +1,4 @@
-package advanced_concepts.generics_variance
+package advanced_concepts.generics
 
 interface VendingGenMachine<in T, out R>
 class Test1 : VendingGenMachine<Coin, Snack>

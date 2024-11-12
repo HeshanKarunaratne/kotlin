@@ -1,4 +1,4 @@
-package advanced_concepts.generics_variance
+package advanced_concepts.generics
 
 sealed interface Beverage {
     val idealTemperature: Int

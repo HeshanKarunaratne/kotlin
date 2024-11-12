@@ -275,7 +275,7 @@ fun main() {
 - Within a subtype parameter types can be more general: Contravariance
 
 ```kt
-package advanced_concepts.generics_variance
+package advanced_concepts.generics
 
 open class Snack
 class CandyBar : Snack()

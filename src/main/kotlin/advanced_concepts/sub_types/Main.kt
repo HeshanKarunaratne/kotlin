@@ -1,8 +1,8 @@
 package advanced_concepts.sub_types
 
-import advanced_concepts.generics_variance.CandyBar
-import advanced_concepts.generics_variance.Coin
-import advanced_concepts.generics_variance.Snack
+import advanced_concepts.generics.CandyBar
+import advanced_concepts.generics.Coin
+import advanced_concepts.generics.Snack
 
 open class VendingMachine {
     open fun purchase(money: Coin): Snack = Snack()
