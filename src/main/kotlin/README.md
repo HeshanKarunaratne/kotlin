@@ -927,3 +927,22 @@ fun main() {
     }
 }
 ```
+
+### Generic Variance
+
+- Creating a class that sends a Snack or a Toy when given a Coin, but since VendingMachine expects a Snack it cannot get
+  a Product(cannot be a general type, can be a subtype of Snack - specialized), because of that below class is not
+  working
+
+```kt
+class ToyOrSnackMachine : VendingMachine() {
+    override fun purchase(money: Coin): Product = randomToyOrSnack()
+}
+
+fun randomToyOrSnack(): Product {
+    return Product()
+}
+```
+
+#### Covariance
+- Within a subtype a function can return a more specific type than declared in its supertype, but not a more general type
