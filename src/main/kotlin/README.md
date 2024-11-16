@@ -944,5 +944,63 @@ fun randomToyOrSnack(): Product {
 }
 ```
 
-#### Covariance
-- Within a subtype a function can return a more specific type than declared in its supertype, but not a more general type
+#### CoVariance
+
+- Within a subtype a function can return a more specific type than declared in its supertype, but not a more general
+  type
+
+![Diagram](images/covariance.PNG "Diagram")
+
+#### ContraVariance
+
+- Within a subtype a function can accept a more general type parameter than declared in its supertype
+
+![Diagram](images/contravariance.PNG "Diagram")
+
+#### Variance and Properties
+
+- A property that’s declared with val can be overridden and given a more specific type, just as you can do with a
+  function return type.
+
+- A property that’s declared with var can also be overridden, of course, but its type must be exactly the same as what’s
+  declared in its supertype
+
+- Before converting to parameterized type
+
+```kt
+package advanced_concepts.generics_variance
+
+open class VendingMachine {
+    open val purchase: (Coin) -> Snack = { randomSnack() }
+}
+
+class CandyBarMachine : VendingMachine() {
+    override val purchase: (Coin) -> CandyBar = { CandyBar() }
+}
+
+fun randomSnack(): Snack {
+    return Snack()
+}
+
+class AnyMoneyVendingMachine : VendingMachine() {
+    override val purchase: (Money) -> Snack = { randomSnack() }
+}
+
+fun purchaseSnackFrom(machine: VendingMachine) = machine.purchase(Dime())
+
+fun main() {
+    val candyBarMachine: CandyBarMachine = CandyBarMachine()
+    val vendingMachine: VendingMachine = CandyBarMachine()
+
+    val candyBar: CandyBar = candyBarMachine.purchase(Dime())
+    val snack: Snack = vendingMachine.purchase(Dime())
+
+
+    val vendingMachine2: VendingMachine = AnyMoneyVendingMachine()
+    val anyMoneyMachine: AnyMoneyVendingMachine = AnyMoneyVendingMachine()
+
+    val snack1: Snack = vendingMachine2.purchase(Dime())
+    val snack2: Snack = anyMoneyMachine.purchase(Dime())
+    val snack3: Snack = anyMoneyMachine.purchase(OneDollar())
+}
+```
